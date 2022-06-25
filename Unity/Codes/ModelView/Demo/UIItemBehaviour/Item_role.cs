@@ -65,7 +65,7 @@ namespace ET
      		}
      	}
 
-		public UnityEngine.UI.Text E_RoleNamText
+		public UnityEngine.UI.Text E_RoleNameText
      	{
      		get
      		{
@@ -76,15 +76,15 @@ namespace ET
      			}
      			if (this.isCacheNode)
      			{
-     				if( this.m_E_RoleNamText == null )
+     				if( this.m_E_RoleNameText == null )
      				{
-		    			this.m_E_RoleNamText = UIFindHelper.FindDeepChild<UnityEngine.UI.Text>(this.uiTransform.gameObject,"E_RoleNam");
+		    			this.m_E_RoleNameText = UIFindHelper.FindDeepChild<UnityEngine.UI.Text>(this.uiTransform.gameObject,"E_RoleName");
      				}
-     				return this.m_E_RoleNamText;
+     				return this.m_E_RoleNameText;
      			}
      			else
      			{
-		    		return UIFindHelper.FindDeepChild<UnityEngine.UI.Text>(this.uiTransform.gameObject,"E_RoleNam");
+		    		return UIFindHelper.FindDeepChild<UnityEngine.UI.Text>(this.uiTransform.gameObject,"E_RoleName");
      			}
      		}
      	}
@@ -93,13 +93,13 @@ namespace ET
 		{
 			this.m_E_RoleButton = null;
 			this.m_E_RoleImage = null;
-			this.m_E_RoleNamText = null;
+			this.m_E_RoleNameText = null;
 			this.uiTransform = null;
 		}
 
 		private UnityEngine.UI.Button m_E_RoleButton = null;
 		private UnityEngine.UI.Image m_E_RoleImage = null;
-		private UnityEngine.UI.Text m_E_RoleNamText = null;
+		private UnityEngine.UI.Text m_E_RoleNameText = null;
 		public Transform uiTransform = null;
 	}
 }

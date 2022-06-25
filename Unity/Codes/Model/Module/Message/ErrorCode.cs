@@ -25,6 +25,19 @@ namespace ET
 
         public const int ERR_RoleNameIsNull = 200010; //游戏角色名空
         public const int ERR_RoleNameSame = 200011; // 游戏角色名相同
+        public const int ERR_RoleNotExist = 200012; // 游戏角色不存在
+        
+        public const int ERR_RequestGateTokenError = 200013; // 请求gate令牌错误
+        public const int ERR_RequestSceneTypeError = 200014; // 请求scene错误
+        public const int ERR_ConnectGateKeyError = 200015; // 连接Gate的key错误
+        public const int ERR_OtherAccountLogin = 200016; // 其他账号连接
+        public const int ERR_SessionPlayerError = 200017; // 获取sessionplayer错误
+        public const int ERR_NonePlayerError = 200018; // 未获取到playeer
+        public const int ERR_SessionStateError = 200019; // Session状态错误
+        public const int ERR_EnterGameError = 200020; // 进入游戏逻辑服错误
+        public const int ERR_ReEnterGameError = 200021; // 二次进入游戏服失败
+        public const int ERR_ReEnterGameError2 = 200022; // 二次进入游戏服失败2
+
 
 
     }
