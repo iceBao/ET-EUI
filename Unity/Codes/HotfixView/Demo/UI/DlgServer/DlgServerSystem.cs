@@ -21,8 +21,8 @@ namespace ET
 		public static void ShowWindow(this DlgServer self, Entity contextData = null)
 		{
 			int count = self.ZoneScene().GetComponent<ServerInfosComponent>().ServerInfoList.Count;
-			self.AddUIScrollItems(ref self.ScrollItemServerTests, count);
 			self.View.E_ServerListLoopVerticalScrollRect.SetVisible(true, count);
+			EUIHelper.AddUIScrollItems(self, ref self.ScrollItemServerTests, count);
 		}
 
 		public static void HideWindow(this DlgServer self)
