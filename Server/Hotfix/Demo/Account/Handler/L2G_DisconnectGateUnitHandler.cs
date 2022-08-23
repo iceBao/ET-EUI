@@ -20,9 +20,14 @@ namespace ET
                 }
                 
                 scene.GetComponent<GateSessionKeyComponent>().Remove(accountId);
-                Session gateSession = Game.EventSystem.Get(player.SessionInstanceId) as Session;
+                Session gateSession = player.ClientSession;
                 if (gateSession != null && !gateSession.IsDisposed)
                 {
+                    if (gateSession.GetComponent<SessionPlayerComponent>() != null)
+                    {
+                        gateSession.GetComponent<SessionPlayerComponent>().isLoginAgain = true;
+                    }
+                    
                     gateSession.Send(new A2C_Disconnect()
                     {
                         Error = ErrorCode.ERR_OtherAccountLogin
@@ -30,7 +35,7 @@ namespace ET
                     gateSession.Disconnect().Coroutine();
                 }
 
-                player.SessionInstanceId = 0;
+                player.ClientSession.Id = 0;
                 player.AddComponent<PlayerOfflineOutTimeComponent>();
             }
 

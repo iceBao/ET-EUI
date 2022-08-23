@@ -8,5 +8,7 @@
 		public long PlayerInstanceId;
 
 		public long AccountId;
+
+		public bool isLoginAgain;
 	}
 }

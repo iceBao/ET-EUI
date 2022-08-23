@@ -41,6 +41,23 @@ namespace ET
                         gateSession.Send(0, memoryStream);
                         return;
                     }
+
+                    if (entity is Player player)
+                    {
+                        if (player == null || player.IsDisposed)
+                        {
+                            return;
+                        }
+
+                        if (player.ClientSession == null || player.ClientSession.IsDisposed)
+                        {
+                            return;
+                        }
+
+                        memoryStream.Seek(Packet.OpcodeIndex, SeekOrigin.Begin);
+                        player.ClientSession.Send(0, memoryStream);
+                        return;
+                    }
                 }
 #endif
                         

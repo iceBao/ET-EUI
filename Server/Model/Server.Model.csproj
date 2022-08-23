@@ -26,6 +26,10 @@
       <Link>Core\%(RecursiveDir)%(FileName)%(Extension)</Link>
     </Compile>
 
+    <Compile Include="..\..\Unity\Codes\Model\Demo\Adventure\BattleRoundResult.cs">
+      <Link>Demo\Adventure\BattleRoundResult.cs</Link>
+    </Compile>
+
     <Compile Include="..\..\Unity\Codes\Model\Demo\Role\RoleInfo.cs">
       <Link>Demo\Role\RoleInfo.cs</Link>
     </Compile>
@@ -36,6 +40,10 @@
 
     <Compile Include="..\..\Unity\Codes\Model\Demo\Unit\UnitType.cs">
       <Link>Demo\Unit\UnitType.cs</Link>
+    </Compile>
+
+    <Compile Include="..\..\Unity\Codes\Model\Module\Numeric\NumericNoticeComponent.cs">
+      <Link>Module\Numeric\Numeric\NumericNoticeComponent.cs</Link>
     </Compile>
 
     <Compile Include="..\..\Unity\Codes\Model\Module\Recast\**\*.cs">
@@ -124,5 +132,8 @@
     <ProjectReference Include="..\..\ThirdParty\ShareLib\ShareLib.csproj" />
     <ProjectReference Include="..\..\ThirdParty\UnityEngine\UnityEngine.csproj" />
     <ProjectReference Include="..\..\Tools\Analyzer\Analyzer.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Demo\Numeric" />
   </ItemGroup>
 </Project>
