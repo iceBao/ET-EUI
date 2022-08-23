@@ -157,6 +157,29 @@ namespace ET
             toggle.onValueChanged?.Invoke(isSelected);
         }
         
+        public static void AddUIScrollItems<T>(this Entity self, ref Dictionary<int, T> dictionary, int count)  where T : Entity,IAwake
+        {
+            if (dictionary == null)
+            {
+                dictionary = new Dictionary<int, T>();
+            }
+            
+            if (count <= 0)
+            {
+                return;
+            }
+            
+            foreach (var item in dictionary)
+            {
+                item.Value.Dispose();
+            }
+            dictionary.Clear();
+            for (int i = 0; i <= count; i++)
+            {
+                T itemServer = self.AddChild<T>(true);
+                dictionary.Add(i , itemServer);
+            }
+        }
 
         public static void RemoveUIScrollItems<K,T>(this K self, ref Dictionary<int, T> dictionary) where K : Entity,IUILogic  where T : Entity,IUIScrollItem
         {
