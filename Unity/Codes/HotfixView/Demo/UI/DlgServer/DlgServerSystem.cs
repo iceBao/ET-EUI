@@ -12,6 +12,7 @@ namespace ET
 		public static void RegisterUIEvent(this DlgServer self)
 		{
 			self.View.E_ConfirmButton.AddListenerAsync(() => { return self.OnConfirmClickHandler(); });
+			
 			self.View.E_ServerListLoopVerticalScrollRect.AddItemRefreshListener((Transform transform, int index) =>
 			{
 				self.OnScrollItemRefreshHandler(transform, index);
@@ -21,8 +22,8 @@ namespace ET
 		public static void ShowWindow(this DlgServer self, Entity contextData = null)
 		{
 			int count = self.ZoneScene().GetComponent<ServerInfosComponent>().ServerInfoList.Count;
-			self.View.E_ServerListLoopVerticalScrollRect.SetVisible(true, count);
 			EUIHelper.AddUIScrollItems(self, ref self.ScrollItemServerTests, count);
+			self.View.E_ServerListLoopVerticalScrollRect.SetVisible(true, count);
 		}
 
 		public static void HideWindow(this DlgServer self)
@@ -32,11 +33,14 @@ namespace ET
 		    
 		public static void OnScrollItemRefreshHandler(this DlgServer self, Transform transform, int index)
 		{
-			Scroll_Item_serverTest serverTest = self.ScrollItemServerTests[index].BindTrans(transform);
-			ServerInfo info = self.ZoneScene().GetComponent<ServerInfosComponent>().ServerInfoList[index];
-			serverTest.E_SelectImage.color = info.Id == self.ZoneScene().GetComponent<ServerInfosComponent>().CurrentServerId? Color.red : Color.cyan;
-			serverTest.E_serverTestTipText.SetText(info.ServerName);
-			serverTest.E_SelectButton.AddListener(() => { self.OnSelectServerItemHandler(info.Id); });
+			if (self.ScrollItemServerTests != null)
+			{
+				Scroll_Item_serverTest serverTest = self.ScrollItemServerTests[index].BindTrans(transform);
+				ServerInfo info = self.ZoneScene().GetComponent<ServerInfosComponent>().ServerInfoList[index];
+				serverTest.E_SelectImage.color = info.Id == self.ZoneScene().GetComponent<ServerInfosComponent>().CurrentServerId? Color.red : Color.cyan;
+				serverTest.E_serverTestTipText.SetText(info.ServerName);
+				serverTest.E_SelectButton.AddListener(() => { self.OnSelectServerItemHandler(info.Id); });
+			}
 			
 		}
 

@@ -10,5 +10,8 @@
         WindowID_Helper,   //提示界面
         WindowID_Server,   //服务器列表
         WindowID_Roles,    //角色列表
+        WindowID_Main,      //主界面
+        WindowID_Adventure, //挑战界面
+        WindowID_RoleInfo, // 角色界面
     }
 }

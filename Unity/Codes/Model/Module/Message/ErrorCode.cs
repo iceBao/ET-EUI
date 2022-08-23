@@ -38,7 +38,15 @@ namespace ET
         public const int ERR_ReEnterGameError = 200021; // 二次进入游戏服失败
         public const int ERR_ReEnterGameError2 = 200022; // 二次进入游戏服失败2
 
-
+        public const int ERR_NumericTypeNotExist = 200023; // 没对应的数值类型
+        public const int ERR_NumericTypeNotAddPoint = 200024; // 不能加点
+        public const int ERR_AddPointNotEnough = 200025; // 点数不足
+        public const int Err_AlreadyAdventureState = 200026; // 已经在战斗中
+        public const int Err_AdventureInDying = 200027; // 已经死亡
+        public const int Err_AdcentureLevelIdError = 200028; // 关卡id错误
+        public const int Err_AdventureLevelNotEnough = 200029; // 等级不满足
+        public const int Err_AdventureRoundError = 200030; // 等级不满足
+        public const int Err_AdventureWinResultError = 200031;//战斗结果错误
 
     }
 }

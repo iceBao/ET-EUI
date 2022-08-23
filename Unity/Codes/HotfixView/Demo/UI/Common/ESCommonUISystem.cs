@@ -7,7 +7,6 @@
         {
             self.ELabel_Test2Text.text = message;
         }
-        
-        
+
     }
 }

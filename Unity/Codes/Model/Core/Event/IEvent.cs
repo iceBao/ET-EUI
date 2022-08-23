@@ -36,7 +36,7 @@ namespace ET
 	}
 	
 	[Event]
-	public abstract class AEvent<A>: IEvent where A: struct
+	public abstract class AEvent<A>: IEvent
 	{
 		public Type GetEventType()
 		{
@@ -66,7 +66,7 @@ namespace ET
 			return typeof (A);
 		}
 
-		protected abstract ETTask Run(A a);
+		protected abstract ETTask Run(A args);
 
 		public async ETTask Handle(A a)
 		{

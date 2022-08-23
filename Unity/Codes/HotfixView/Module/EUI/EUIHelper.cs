@@ -228,7 +228,7 @@ namespace ET
             closeButton.onClick.RemoveAllListeners();
             closeButton.onClick.AddListener(() => { self.DomainScene().GetComponent<UIComponent>().HideWindow(self.GetParent<UIBaseWindow>().WindowID); });
         }
-#endregion
+        #endregion
         
     }
 }
