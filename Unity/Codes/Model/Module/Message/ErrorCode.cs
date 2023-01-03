@@ -41,12 +41,19 @@ namespace ET
         public const int ERR_NumericTypeNotExist = 200023; // 没对应的数值类型
         public const int ERR_NumericTypeNotAddPoint = 200024; // 不能加点
         public const int ERR_AddPointNotEnough = 200025; // 点数不足
-        public const int Err_AlreadyAdventureState = 200026; // 已经在战斗中
-        public const int Err_AdventureInDying = 200027; // 已经死亡
-        public const int Err_AdcentureLevelIdError = 200028; // 关卡id错误
-        public const int Err_AdventureLevelNotEnough = 200029; // 等级不满足
-        public const int Err_AdventureRoundError = 200030; // 等级不满足
-        public const int Err_AdventureWinResultError = 200031;//战斗结果错误
+        public const int ERR_AlreadyAdventureState = 200026; // 已经在战斗中
+        public const int ERR_AdventureInDying = 200027; // 已经死亡
+        public const int ERR_AdcentureLevelIdError = 200028; // 关卡id错误
+        public const int ERR_AdventureLevelNotEnough = 200029; // 等级不满足
+        public const int ERR_AdventureRoundError = 200030; // 等级不满足
+        public const int ERR_AdventureWinResultError = 200031;//战斗结果错误
+
+        public const int ERR_ExpNotEnough = 200036; // 经验不足
+        public const int ERR_ExpNumError = 200037; // 经验值错误
+
+        public const int ERR_ItemNotExist = 200039; // 道具不存在
+        public const int ERR_EquipItemError = 200041;// 穿戴装备错误 
+        public const int ERR_AddBagItemError = 200042; // 添加到背包错误
 
     }
 }

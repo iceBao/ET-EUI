@@ -13,5 +13,6 @@
         WindowID_Main,      //主界面
         WindowID_Adventure, //挑战界面
         WindowID_RoleInfo, // 角色界面
+        WindowID_ItemPopUp, //物品详情界面
     }
 }

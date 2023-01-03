@@ -51,4 +51,8 @@
     <ProjectReference Include="..\..\Tools\Analyzer\Analyzer.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
     <ProjectReference Include="..\Model\Server.Model.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Demo\Bag\Handler" />
+    <Folder Include="Demo\Equipment\Event" />
+  </ItemGroup>
 </Project>

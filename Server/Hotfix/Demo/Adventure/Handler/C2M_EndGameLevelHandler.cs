@@ -12,7 +12,7 @@ namespace ET
             int levelId = numericComponent.GetAsInt(NumericType.AdventureState);
             if (levelId == 0 || !BattleLevelConfigCategory.Instance.Contain(levelId))
             {
-                response.Error = ErrorCode.Err_AdcentureLevelIdError;
+                response.Error = ErrorCode.ERR_AdcentureLevelIdError;
                 reply();
                 return;
             }
@@ -20,7 +20,7 @@ namespace ET
             // 检测上传的回合数是否正常
             if (request.Round <= 0)
             {
-                response.Error = ErrorCode.Err_AdventureRoundError;
+                response.Error = ErrorCode.ERR_AdventureRoundError;
                 reply();
                 return;
             }
@@ -37,7 +37,7 @@ namespace ET
             // 检测战斗胜利结果是否正常
             if ( !unit.GetComponent<AdventureCheckComponent>().CheckBattleWinResult(request.Round) )
             {
-                response.Error = ErrorCode.Err_AdventureWinResultError;
+                response.Error = ErrorCode.ERR_AdventureWinResultError;
                 reply();
                 return;
             }

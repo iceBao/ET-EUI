@@ -32,7 +32,7 @@ namespace ET
         {
             get => this.Rotation * Vector3.forward;
             set => this.Rotation = Quaternion.LookRotation(value, Vector3.up);
-        }
+        } 
 
         private WrapQuaternion rotation = new WrapQuaternion();
         public Quaternion Rotation

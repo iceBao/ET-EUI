@@ -64,6 +64,10 @@
 	    public const int ArmorFinalPct = Armor * 10 + 5;
 
 	    public const int AdditionalArmor = 1016; // 护甲追加
+	    
+	    public const int Position = 1007;
+	    public const int Height = 1008;
+	    public const int Weight = 1009;
 
 	    public const int Power = 3001; // 力量
 
@@ -90,10 +94,8 @@
 	    public const int AdventureStartTime = 3012; // 关卡开始冒险的时间
 
 	    public const int IsAlive = 3013; //存活状态 0为死亡 1为活着
-	    
-	    public const int Position = 1007;
-	    public const int Height = 1008;
-	    public const int Weight = 1009;
+
+	    public const int MaxBagCapacity = 3015; // 背包的最大负重
 
     }
 }

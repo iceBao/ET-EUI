@@ -10,21 +10,21 @@ namespace ET
 
             if (numericComponent.GetAsInt(NumericType.AdventureState) != 0)
             {
-                response.Error = ErrorCode.Err_AlreadyAdventureState;
+                response.Error = ErrorCode.ERR_AlreadyAdventureState;
                 reply();
                 return;
             }
 
             if (numericComponent.GetAsInt(NumericType.DyingState) != 0)
             {
-                response.Error = ErrorCode.Err_AdventureInDying;
+                response.Error = ErrorCode.ERR_AdventureInDying;
                 reply();
                 return;
             }
 
             if (!BattleLevelConfigCategory.Instance.Contain(request.LevelId))
             {
-                response.Error = ErrorCode.Err_AdcentureLevelIdError;
+                response.Error = ErrorCode.ERR_AdcentureLevelIdError;
                 reply();
                 return;
             }
@@ -32,7 +32,7 @@ namespace ET
             BattleLevelConfig config = BattleLevelConfigCategory.Instance.Get(request.LevelId);
             if (numericComponent[NumericType.Level] < config.MiniEnterLevel[0])
             {
-                response.Error = ErrorCode.Err_AdventureLevelNotEnough;
+                response.Error = ErrorCode.ERR_AdventureLevelNotEnough;
                 reply();
                 return;
             }
