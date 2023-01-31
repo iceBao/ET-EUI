@@ -7,6 +7,8 @@ using UnityEngine.UI;
 namespace ET
 {
 	[FriendClass(typeof(DlgItemPopUp))]
+	[FriendClass(typeof(EquipInfoComponent))]
+	[FriendClass(typeof(AttributeEntry))]
 	public static  class DlgItemPopUpSystem
 	{
 

@@ -37,7 +37,7 @@
     
     [FriendClass(typeof(Item))]
     [FriendClass(typeof(AttributeEntry))]
-    [FriendClass(typeof(EquipmentsComponent))]
+    [FriendClass(typeof(EquipInfoComponent))]
     public static class EquipInfoComponentSystem
     {
         public static void GenerateEntries(this EquipInfoComponent self)

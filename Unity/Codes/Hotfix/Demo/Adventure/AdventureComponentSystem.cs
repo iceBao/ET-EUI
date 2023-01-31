@@ -22,7 +22,8 @@ namespace ET
             self.AliveEnemyIdList.Clear();
         }
     }
-
+    
+    [FriendClass(typeof(AdventureComponent))]
     public static class AdventureComponentSystem
     {
         public static void ResetAdventure(this AdventureComponent self)

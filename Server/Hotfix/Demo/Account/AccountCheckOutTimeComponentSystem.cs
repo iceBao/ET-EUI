@@ -38,6 +38,8 @@ namespace ET
         }
     }
 
+    [FriendClass(typeof(AttributeEntry))]
+    [FriendClass(typeof(AccountCheckOutTimeComponent))]
     public static class AccountCheckOutTimeComponentSystem
     {
         public static void DeleteSession(this AccountCheckOutTimeComponent self)

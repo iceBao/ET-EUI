@@ -8,6 +8,7 @@ namespace ET
         }
     }
     
+    [FriendClass(typeof(AccountSessionsComponent))]
     public static class AccountSessionsComponentSystem
     {
         public static long Get(this AccountSessionsComponent self, long accountId)

@@ -5,7 +5,7 @@
         Common  = 1, //普通词条
         Special = 2, //特殊词条
     }
-    
+
 #if SERVER
     public class AttributeEntry:Entity,IAwake,IDestroy,ISerializeToEntity
 #else

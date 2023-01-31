@@ -12,6 +12,7 @@ namespace ET
         }
     }
 
+    [FriendClass(typeof(ServerInfosComponent))]
     public static class ServerInfosComponentSystem
     {
         public static void Add(this ServerInfosComponent self, ServerInfo serverInfo)

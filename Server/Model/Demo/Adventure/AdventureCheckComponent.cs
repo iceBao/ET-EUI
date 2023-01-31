@@ -2,6 +2,7 @@
 
 namespace ET
 {
+    [ComponentOf(typeof(Unit))]
     public class AdventureCheckComponent:Entity,IAwake,IDestroy
     {
         public Dictionary<int, int> EnemyHpDictionary = new Dictionary<int, int>();

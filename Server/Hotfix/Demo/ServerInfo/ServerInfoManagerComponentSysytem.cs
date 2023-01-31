@@ -1,6 +1,6 @@
 namespace ET
 {
-    public class ServerInfoManagerComponentAwakeSysytem : AwakeSystem<ServerInfoManagerComponent>
+    public class ServerInfoManagerComponentAwakeSystem : AwakeSystem<ServerInfoManagerComponent>
     {
         public override void Awake(ServerInfoManagerComponent self)
         {
@@ -8,7 +8,7 @@ namespace ET
         }
     }
 
-    public class ServerInfoManagerComponentDestroySysytem : DestroySystem<ServerInfoManagerComponent>
+    public class ServerInfoManagerComponentDestroySystem : DestroySystem<ServerInfoManagerComponent>
     {
         public override void Destroy(ServerInfoManagerComponent self)
         {
@@ -20,7 +20,7 @@ namespace ET
         }
     }
 
-    public class ServerInfoManagerComponentLoadSysytem: LoadSystem<ServerInfoManagerComponent>
+    public class ServerInfoManagerComponentLoadSystem: LoadSystem<ServerInfoManagerComponent>
     {
         public override void Load(ServerInfoManagerComponent self)
         {
@@ -28,7 +28,9 @@ namespace ET
         }
     }
 
-    public static class ServerInfoManagerComponentSysytem
+    [FriendClass(typeof(ServerInfoManagerComponent))]
+    [FriendClass(typeof(ServerInfo))]
+    public static class ServerInfoManagerComponentSystem
     {
         public static async ETTask Awake(this ServerInfoManagerComponent self)
         {

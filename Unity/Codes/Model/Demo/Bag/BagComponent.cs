@@ -1,8 +1,12 @@
 ﻿using System.Collections.Generic;
+#if SERVER
 using MongoDB.Bson.Serialization.Attributes;
+#endif
 
 namespace ET
 {
+    [ComponentOf]
+    [ChildType(typeof(Item))]
 #if SERVER
     public class BagComponent:Entity,IAwake,IDestroy,IDeserialize,ITransfer,IUnitCache
 #else

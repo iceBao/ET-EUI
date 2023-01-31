@@ -52,6 +52,7 @@ namespace ET
         public const int ERR_ExpNumError = 200037; // 经验值错误
 
         public const int ERR_ItemNotExist = 200039; // 道具不存在
+        public const int ERR_BagMaxLoad = 200040; // 背包满了
         public const int ERR_EquipItemError = 200041;// 穿戴装备错误 
         public const int ERR_AddBagItemError = 200042; // 添加到背包错误
 

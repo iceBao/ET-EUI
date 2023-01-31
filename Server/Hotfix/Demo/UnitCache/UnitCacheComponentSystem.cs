@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace ET
 {
-    [ObjectSystem]
+    [FriendClass(typeof(UnitCache))]
     public class UnitCacheComponentAwakeSystem: AwakeSystem<UnitCacheComponent>
     {
         public override void Awake(UnitCacheComponent self)
@@ -38,6 +38,8 @@ namespace ET
         }
     }
 
+    [FriendClass(typeof(UnitCache))]
+    [FriendClass(typeof(UnitCacheComponent))]
     public static class UnitCacheComponentSystem
     {
         public static async ETTask AddOrUpdate(this UnitCacheComponent self, long unitId, ListComponent<Entity> entityList)

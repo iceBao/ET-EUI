@@ -2,6 +2,7 @@ using System;
 
 namespace ET
 {
+    [FriendClass(typeof(ServerInfoManagerComponent))]
     public class C2A_GetServerInfosHandler : AMRpcHandler<C2A_GetServerInfos,A2C_GetServerInfo>
 
     {

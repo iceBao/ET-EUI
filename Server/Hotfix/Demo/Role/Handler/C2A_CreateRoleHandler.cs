@@ -2,6 +2,7 @@ using System;
 
 namespace ET
 {
+    [FriendClass(typeof(RoleInfo))]
     public class C2A_CreateRoleHandler : AMRpcHandler<C2A_CreateRole,A2C_CreateRole>
     {
         protected override async ETTask Run(Session session, C2A_CreateRole request, A2C_CreateRole response, Action reply)

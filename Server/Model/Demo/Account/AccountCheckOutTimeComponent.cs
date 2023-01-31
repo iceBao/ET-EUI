@@ -1,5 +1,6 @@
 namespace ET
 {
+    [ComponentOf]
     public class AccountCheckOutTimeComponent : Entity,IAwake<long>,IDestroy
     {
         public long Timer = 0;

@@ -1,6 +1,8 @@
 ﻿namespace ET
 {
 	[AUIEvent(WindowID.WindowID_Server)]
+	[FriendClass(typeof(WindowCoreData))]
+	[FriendClass(typeof(UIBaseWindow))]
 	public  class DlgServerEventHandler : IAUIEventHandler
 	{
 

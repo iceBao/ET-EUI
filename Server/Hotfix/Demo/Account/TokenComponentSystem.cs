@@ -1,5 +1,6 @@
 namespace ET
 {
+    [FriendClass(typeof(TokenComponent))]
     public static class TokenComponentSystem
     {
         public static void Add(this TokenComponent self, long key, string token)

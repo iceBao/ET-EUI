@@ -53,6 +53,5 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Demo\Bag\Handler" />
-    <Folder Include="Demo\Equipment\Event" />
   </ItemGroup>
 </Project>

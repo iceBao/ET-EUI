@@ -40,7 +40,7 @@ namespace ET
                 return null;
             }
 
-            scene.AddChild(unit);
+            scene.GetComponent<UnitComponent>().AddChild(unit);
             foreach (Entity entity in queryUnit.EntityList)
             {
                 if (entity == null || entity is Unit)

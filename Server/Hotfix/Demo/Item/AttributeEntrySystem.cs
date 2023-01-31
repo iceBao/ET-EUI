@@ -9,7 +9,8 @@
             self.Type = EntryType.Common;
         }
     }
-
+    
+    [FriendClass(typeof(AttributeEntry))]
     public static class AttributeEntrySystem
     {
         public static AttributeEntryProto ToMessage(this AttributeEntry self)

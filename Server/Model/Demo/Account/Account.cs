@@ -6,6 +6,7 @@ namespace ET
         
         BlackList = 1,
     }
+    
     public class Account : Entity,IAwake
     {
         public string AccountName; //账户名

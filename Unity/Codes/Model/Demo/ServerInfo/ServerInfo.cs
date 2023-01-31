@@ -5,6 +5,7 @@ namespace ET
         Normal = 0,
         Stop = 1,
     }
+    [ChildType(typeof(AttributeEntry))]
     public class ServerInfo : Entity,IAwake
     {
         public int Status;
